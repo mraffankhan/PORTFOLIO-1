@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFFAN KHAN | Creative Developer</title>
+    <meta name="description" content="Portfolio of Affan Khan - Creative Developer & UI/UX Designer.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&family=Oswald:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="cursor-follower"></div>
+
+    <header id="main-header">
+        <div class="logo">KHAN</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="contact-btn" onclick="window.open('https://wa.me/918050324908', '_blank')">GET IN TOUCH</button>
+    </header>
+
+    <main>
+        <section id="home" class="split-section">
+            <div class="content-side reveal-text">
+                <h1 class="name">AFFAN<br>KHAN</h1>
+                <div class="roles">
+                    <span>CREATIVE DEVELOPER</span>
+                    <span class="separator">/</span>
+                    <span>UI/UX</span>
+                    <span class="separator">/</span>
+                    <span>BRANDING</span>
+                </div>
+                <button class="cta-btn"
+                    onclick="document.getElementById('work').scrollIntoView({behavior: 'smooth'})">VIEW WORK</button>
+            </div>
+            <div class="media-side" id="hero-media">
+                <div id="hero-marquee" class="marquee-container horizontal">
+                    <div class="marquee-content"></div>
+                    <div class="marquee-content"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="projects-section">
+            <div class="section-header">
+                <h2>SELECTED WORKS</h2>
+                <span class="line"></span>
+            </div>
+            <div class="project-grid">
+                <div class="project-item reveal-up">
+                    <div class="img-container">
+                        <img src="e-commerce.png" alt="Project 1">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce / Branding</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="project-item reveal-up delay-1">
+                    <div class="img-container">
+                        <img src="branding.png" alt="Project 2">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Architecture / Web</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="project-item reveal-up delay-2">
+                    <div class="img-container">
+                        <img src="digital.png" alt="Project 3">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Digital Art / Experience</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="project-item reveal-up delay-3">
+                    <div class="img-container">
+                        <img src="ui.png" alt="Project 4">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>App Design / UI</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="split-section reverse">
+            <div class="media-side" id="about-media">
+                <div id="about-marquee" class="marquee-container vertical">
+                    <div class="marquee-content"></div>
+                    <div class="marquee-content"></div>
+                </div>
+            </div>
+            <div class="content-side reveal-text">
+                <h2>ABOUT ME</h2>
+                <p class="bio">
+                    I am a multidisciplinary creative developer bridging the gap between design and technology.
+                    With a focus on raw aesthetics and precision, I craft digital experiences that leave a lasting
+                    impact.
+                </p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="number">1.5+</span>
+                        <span class="label">YEARS EXP.</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="number">40+</span>
+                        <span class="label">PROJECTS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="contact-content reveal-up">
+                <h2>LET'S CREATE TOGETHER</h2>
+                <p>Open for collaborations and freelance projects.</p>
+                <div class="contact-actions">
+                    <button class="primary-btn" onclick="window.open('https://wa.me/918050324908', '_blank')">WHATSAPP
+                        ME</button>
+                    <a href="mailto:hello@affankhan.com" class="secondary-link">rnxkhan@gmail.com</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <span>AFFAN KHAN &copy; 2024</span>
+        </div>
+        <div class="footer-right">
+            <a href="#">INSTAGRAM</a>
+            <a href="#">LINKEDIN</a>
+            <a href="#">BEHANCE</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
