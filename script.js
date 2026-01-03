@@ -71,4 +71,67 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         content.innerHTML = html;
     });
+    // Parallax Scroll Animation
+    let parallaxItems = [];
+
+    function initParallax() {
+        parallaxItems = [];
+        document.querySelectorAll('[data-speed]').forEach(el => {
+            // Reset transform to get accurate position
+            el.style.setProperty('--scroll-y', '0px');
+            const rect = el.getBoundingClientRect();
+            const absoluteTop = rect.top + window.scrollY;
+
+            parallaxItems.push({
+                el: el,
+                speed: parseFloat(el.getAttribute('data-speed')),
+                initialTop: absoluteTop
+            });
+        });
+    }
+
+    function updateParallax() {
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+
+        parallaxItems.forEach(item => {
+            // Check if item is roughly in view to optimize
+            // Use a generous buffer
+            if (scrollY + windowHeight > item.initialTop - 200 && scrollY < item.initialTop + windowHeight + 200) {
+                // Calculate offset: 
+                // When scrollY == item.initialTop (element is at top of screen), offset is 0?
+                // Or when element is in center?
+
+                // Let's anchor it to the viewport center for natural feel
+                const viewportCenter = scrollY + windowHeight / 2;
+                const elementCenter = item.initialTop + (item.el.offsetHeight / 2);
+
+                // Difference determines movement
+                const offset = (elementCenter - viewportCenter) * item.speed;
+
+                item.el.style.setProperty('--scroll-y', `${offset}px`);
+            }
+        });
+    }
+
+    // Initialize
+    initParallax();
+
+    // Scroll Loop
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                updateParallax();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+
+    // Handle Resize
+    window.addEventListener('resize', () => {
+        initParallax();
+        updateParallax();
+    });
 });

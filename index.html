@@ -21,7 +21,7 @@
         <div class="logo">KHAN</div>
         <nav>
             <a href="#home">Home</a>
-            <a href="#work">Work</a>
+            <a href="#skills">Skills</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -40,7 +40,8 @@
                     <span>BRANDING</span>
                 </div>
                 <button class="cta-btn"
-                    onclick="document.getElementById('work').scrollIntoView({behavior: 'smooth'})">VIEW WORK</button>
+                    onclick="document.getElementById('skills').scrollIntoView({behavior: 'smooth'})">VIEW
+                    SKILLS</button>
             </div>
             <div class="media-side" id="hero-media">
                 <div id="hero-marquee" class="marquee-container horizontal">
@@ -50,51 +51,73 @@
             </div>
         </section>
 
-        <section id="work" class="projects-section">
+
+
+        <section id="skills" class="skills-section">
             <div class="section-header">
-                <h2>SELECTED WORKS</h2>
+                <h2>SKILLS &amp; ARSENAL</h2>
                 <span class="line"></span>
             </div>
-            <div class="project-grid">
-                <div class="project-item reveal-up">
-                    <div class="img-container">
-                        <img src="e-commerce.png" alt="Project 1">
-                        <div class="overlay"></div>
+            <div class="skills-grid">
+                <!-- AI / LLM -->
+                <div class="skill-category reveal-up" data-speed="0.05">
+                    <div class="category-header">
+                        <span class="icon">🧠</span>
+                        <h3>AI / LLM</h3>
                     </div>
-                    <div class="project-info">
-                        <h3>E-Commerce / Branding</h3>
-                        <p></p>
-                    </div>
+                    <ul class="skill-list">
+                        <li>LLM API Integration <span class="sub-text">(OpenAI / Gemini)</span></li>
+                        <li>Prompt Engineering <span class="sub-text">(Role-based, JSON)</span></li>
+                        <li>Output Control &amp; Validation</li>
+                        <li>Cost &amp; Latency Awareness</li>
+                        <li>RAG Systems <span class="sub-text">(Retrieval Augmented Gen)</span></li>
+                        <li>Session Memory</li>
+                    </ul>
                 </div>
-                <div class="project-item reveal-up delay-1">
-                    <div class="img-container">
-                        <img src="branding.png" alt="Project 2">
-                        <div class="overlay"></div>
+
+                <!-- WEB -->
+                <div class="skill-category reveal-up delay-1" data-speed="0.1">
+                    <div class="category-header">
+                        <span class="icon">🌐</span>
+                        <h3>WEB</h3>
                     </div>
-                    <div class="project-info">
-                        <h3>Architecture / Web</h3>
-                        <p></p>
-                    </div>
+                    <ul class="skill-list">
+                        <li>React <span class="sub-text">(Hooks, State, API)</span></li>
+                        <li>Node.js + Express <span class="sub-text">(REST APIs)</span></li>
+                        <li>Auth Flows <span class="sub-text">(Login, Protected Routes)</span></li>
+                        <li>SQL <span class="sub-text">(Postgres, Supabase)</span></li>
+                        <li>Modern CSS <span class="sub-text">(Animations, Layouts)</span></li>
+                    </ul>
                 </div>
-                <div class="project-item reveal-up delay-2">
-                    <div class="img-container">
-                        <img src="digital.png" alt="Project 3">
-                        <div class="overlay"></div>
+
+                <!-- PRODUCT SKILLS -->
+                <div class="skill-category reveal-up delay-2" data-speed="0.05">
+                    <div class="category-header">
+                        <span class="icon">📦</span>
+                        <h3>PRODUCT</h3>
                     </div>
-                    <div class="project-info">
-                        <h3>Digital Art / Experience</h3>
-                        <p></p>
-                    </div>
+                    <ul class="skill-list">
+                        <li>AI Feature Mapping</li>
+                        <li>End-to-End Flow <span class="sub-text">(UI → API → AI)</span></li>
+                        <li>Error Handling &amp; Fallbacks</li>
+                        <li>Admin Dashboards</li>
+                        <li>User Centric Design</li>
+                    </ul>
                 </div>
-                <div class="project-item reveal-up delay-3">
-                    <div class="img-container">
-                        <img src="ui.png" alt="Project 4">
-                        <div class="overlay"></div>
+
+                <!-- TOOLS -->
+                <div class="skill-category reveal-up delay-3" data-speed="0.1">
+                    <div class="category-header">
+                        <span class="icon">🧰</span>
+                        <h3>TOOLS</h3>
                     </div>
-                    <div class="project-info">
-                        <h3>App Design / UI</h3>
-                        <p></p>
-                    </div>
+                    <ul class="skill-list">
+                        <li>Git <span class="sub-text">(Version Control)</span></li>
+                        <li>Postman <span class="sub-text">(API Testing)</span></li>
+                        <li>Deployment <span class="sub-text">(Vercel / Render)</span></li>
+                        <li>Supabase / Firebase</li>
+                        <li>Figma <span class="sub-text">(UI/UX Design)</span></li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -114,17 +137,19 @@
                     impact.
                 </p>
                 <div class="stats">
-                    <div class="stat-item">
+                    <div class="stat-item" data-speed="0.08">
                         <span class="number">1.5+</span>
                         <span class="label">YEARS EXP.</span>
                     </div>
-                    <div class="stat-item">
+                    <div class="stat-item" data-speed="0.12">
                         <span class="number">40+</span>
                         <span class="label">PROJECTS</span>
                     </div>
                 </div>
             </div>
         </section>
+
+
 
         <section id="contact" class="contact-section">
             <div class="contact-content reveal-up">
